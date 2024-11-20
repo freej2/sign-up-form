@@ -41,6 +41,7 @@ form {
     flex-direction: column;
     gap: 20px;  /* space between rows */
     margin-bottom: 20px;
+    padding-right: 60px;
     font-size: 12px;
 }
 
@@ -61,21 +62,22 @@ form {
     flex: 1 1 33%
 }
 
-.picture-container img {
+.picture-container > img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.picture-container img[src*='odin']{
+.picture-container .odin{
+    position: absolute;
     object-fit: contain;
     z-index: 1;
     padding: 20px;
 }
 
 .submit-container button {
-    background-color: rgb(97, 97, 7);
+    background-color: rgb(3, 17, 55);
     color: white;
     border-radius: 8px;
     padding: 10px;
@@ -84,4 +86,29 @@ form {
 
 .form-container input {
     border-radius: 4px;
+}
+
+.odin {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.odin img {
+    height: 100%;
+    width: auto;
+}
+
+.odin span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Norse-Bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('Norse-Bold.otf') format('opentype');
 }
