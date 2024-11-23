@@ -42,7 +42,7 @@ form {
     flex-direction: column;
     gap: 20px;  /* space between rows */
     margin-bottom: 20px;
-    padding-right: 60px;
+    padding-right: 120px;
     font-size: 12px;
 }
 
@@ -55,6 +55,22 @@ form {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+input {
+    border: 1px solid #E5E7EB;  /* Default border */
+    transition: all 0.2s ease-in-out;  /* Smooth transition */
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #3b82f6;  /* Modern blue */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);  /* Subtle glow */
+}
+
+input[type='password']:invalid{
+    outline: none;
+    border: 1px solid #ff0000;
 }
 
 .picture-container {
@@ -83,6 +99,24 @@ form {
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style different link states */
+a:link {
+    color: rgb(3, 17, 55);         /* Unvisited links */
+}
+
+a:visited {
+    color: #cd0c0c;          /* Visited links */
+}
+
+a:hover {
+    text-decoration: underline;  /* Optional: add underline on hover */
 }
 
 .form-container input {
